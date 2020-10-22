@@ -1,8 +1,8 @@
 
-THEOS_DEVICE_IP = 10.0.44.136
+THEOS_DEVICE_IP = 192.168.211.158
 
 include $(THEOS)/makefiles/common.mk
-ARCHS = armv7 armv7s arm64
+ARCHS = arm64 arm64e
 TWEAK_NAME = FlexInjected
 FlexInjected_FILES = Tweak.xm
 

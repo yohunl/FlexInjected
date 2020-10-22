@@ -3,23 +3,18 @@
 //  Flipboard
 //
 //  Created by Ryan Olson on 2014-05-01.
-//  Copyright (c) 2014 Flipboard. All rights reserved.
+//  Copyright (c) 2020 FLEX Team. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FLEXTableViewController.h"
 
-@protocol FLEXHierarchyTableViewControllerDelegate;
+@interface FLEXHierarchyTableViewController : FLEXTableViewController
 
-@interface FLEXHierarchyTableViewController : UITableViewController
++ (instancetype)windows:(NSArray<UIWindow *> *)allWindows
+             viewsAtTap:(NSArray<UIView *> *)viewsAtTap
+           selectedView:(UIView *)selectedView;
 
-- (id)initWithViews:(NSArray *)allViews viewsAtTap:(NSArray *)viewsAtTap selectedView:(UIView *)selectedView depths:(NSDictionary *)depthsForViews;
-
-@property (nonatomic, weak) id <FLEXHierarchyTableViewControllerDelegate> delegate;
-
-@end
-
-@protocol FLEXHierarchyTableViewControllerDelegate <NSObject>
-
-- (void)hierarchyViewController:(FLEXHierarchyTableViewController *)hierarchyViewController didFinishWithSelectedView:(UIView *)selectedView;
+@property (nonatomic) UIView *selectedView;
+@property (nonatomic) void(^didSelectRowAction)(UIView *selectedView);
 
 @end

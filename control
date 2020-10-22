@@ -1,7 +1,7 @@
 Package: com.yourcompany.flexinjected
 Name: FlexInjected
 Depends: mobilesubstrate, preferenceloader,applist
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: An awesome MobileSubstrate tweak!
 Maintainer: lingyohunl
